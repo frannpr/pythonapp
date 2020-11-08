@@ -5,4 +5,4 @@ def test_hello():
     response = app.test_client().get('/')
 
     assert response.status_code == 200
-    assert response.data == b'<h1>Prueba de Python en Docker!</h1>'
+    assert response.data == 'Prueba de Python en Docker!'
