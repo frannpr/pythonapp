@@ -5,18 +5,10 @@
     {
       "dnsSearchDomains": null,
       "environmentFiles": null,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "secretOptions": null,
-        "options": {
-          "awslogs-group": "/ecs/first-run-task-definition",
-          "awslogs-region": "us-east-1",
-          "awslogs-stream-prefix": "ecs"
-        }
-      },
-      "entryPoint": [],
+      "logConfiguration": null,
+      "entryPoint": null,
       "portMappings": [],
-      "command": [],
+      "command": null,
       "linuxParameters": null,
       "cpu": 0,
       "environment": [],
@@ -27,11 +19,11 @@
       "workingDirectory": null,
       "secrets": null,
       "dockerSecurityOptions": null,
-      "memory": null,
+      "memory": 512,
       "memoryReservation": null,
       "volumesFrom": [],
       "stopTimeout": null,
-      "image": "439574440637.dkr.ecr.us-east-1.amazonaws.com/pythonapp:0fb16f272b8b8173389988c28d6f0c298651d5a4",
+      "image": "439574440637.dkr.ecr.us-east-1.amazonaws.com/pythonapp:fab28b53baf9b6c9e795b059185d378682330158",
       "startTimeout": null,
       "firelensConfiguration": null,
       "dependsOn": null,
@@ -39,7 +31,7 @@
       "interactive": null,
       "healthCheck": null,
       "essential": true,
-      "links": [],
+      "links": null,
       "hostname": null,
       "extraHosts": null,
       "pseudoTerminal": null,
@@ -52,27 +44,14 @@
     }
   ],
   "placementConstraints": [],
-  "memory": "512",
-  "taskRoleArn": null,
+  "memory": null,
+  "taskRoleArn": "arn:aws:iam::439574440637:role/rol-tarea-ecs",
   "compatibilities": [
-    "EC2",
-    "FARGATE"
+    "EC2"
   ],
-  "taskDefinitionArn": "arn:aws:ecs:us-east-1:439574440637:task-definition/pythonapp:4",
+  "taskDefinitionArn": "arn:aws:ecs:us-east-1:439574440637:task-definition/pythonapp:7",
   "family": "pythonapp",
   "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.execution-role-awslogs"
-    },
     {
       "targetId": null,
       "targetType": null,
@@ -83,34 +62,22 @@
       "targetId": null,
       "targetType": null,
       "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+      "name": "com.amazonaws.ecs.capability.task-iam-role"
     },
     {
       "targetId": null,
       "targetType": null,
       "value": null,
       "name": "ecs.capability.execution-role-ecr-pull"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.18"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "ecs.capability.task-eni"
     }
   ],
   "pidMode": null,
   "requiresCompatibilities": [
-    "FARGATE"
+    "EC2"
   ],
-  "networkMode": "awsvpc",
-  "cpu": "256",
-  "revision": 4,
+  "networkMode": null,
+  "cpu": null,
+  "revision": 7,
   "status": "ACTIVE",
   "inferenceAccelerators": null,
   "proxyConfiguration": null,
